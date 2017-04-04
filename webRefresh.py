@@ -1,4 +1,5 @@
 #Constantly refreshes page at a rate of choice
+#Must download selenium first
 from selenium import webdriver
 import time
 import urllib
