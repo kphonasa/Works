@@ -56,8 +56,7 @@ int factorial (int x)
 }
   
   
-// The Babylonian Method was so much simpler than I was making it out to be
-// My salt is real
+// The Babylonian Method
 void squareroot(int z)
 {
   double n=z;
