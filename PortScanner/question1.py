@@ -1,10 +1,10 @@
-#Networking and Security assignment 2 port scanner
+#Port scanner
 from socket import *
 from utils import *
 import time
 
 
-IPS=['31.13.74.36','53.163.225.50','40.97.142.194','132.163.4.107'] 
+IPS=[] 
 for IP in IPS:
     counter=0
     closed=0
