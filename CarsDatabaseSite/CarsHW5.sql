@@ -1,0 +1,19 @@
+--car database--
+DROP TABLE if EXISTS CARSHW5;
+
+CREATE TABLE CARSHW5(
+	ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	BID INT NOT NULL,
+	MODEL VARCHAR (20) NOT NULL,
+	MODELYEAR INT(4) NOT NULL,
+	CARTRIM CHAR (40) NOT NULL,
+	URL VARCHAR (300) NOT NULL,
+	PRIMARY KEY(ID)
+);
+
+--sample data--
+INSERT INTO CARSHW5(BID, MODEL, MODELYEAR, CARTRIM, URL) VALUES (1,'RX-8',2004,'Red','https://www.youtube.com/watch?v=ckB4-oUF17M');
+INSERT INTO CARSHW5(BID, MODEL, MODELYEAR, CARTRIM, URL) VALUES (2,'Camaro',2017,'Blue','https://www.youtube.com/watch?v=Joozwqlsppw');
+INSERT INTO CARSHW5(BID, MODEL, MODELYEAR, CARTRIM, URL) VALUES (3,'Focus',2017,'Black','https://www.youtube.com/watch?v=mpPsbgS5z3M');
+INSERT INTO CARSHW5(BID, MODEL, MODELYEAR, CARTRIM, URL) VALUES (4,'SL-Class',2008,'Grey','https://www.youtube.com/watch?v=PBmMTN_pVjA');
+INSERT INTO CARSHW5(BID, MODEL, MODELYEAR, CARTRIM, URL) VALUES (5,'Accord',2001,'Silver','https://www.youtube.com/watch?v=xOdAxES3isI');
