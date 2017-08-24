@@ -1,0 +1,1 @@
+[('abcd', 'gmail.com'), ('stuffy', 'gmail.com'), ('finarts', 'gmail.com'), ('flower1', 'uiowa.edu'), ('lily3', 'uiowa.edu'), ('prefaces3', 'yahoo.co.in'), ('myemail', 'yahoo.com'), ('persimnon', 'yahoo.com')]
