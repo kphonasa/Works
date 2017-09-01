@@ -21,9 +21,3 @@ def hanoi(stack,A,B,C):
                         print ('move disc',stack[0],'from',A,'to',C)
                         hanoi(stack[1:],B,A,C)
             print("Topmost disk moved",counter,"times.")
-
-
-
-
-
-hanoi(stack, 'X','Y','Z')
