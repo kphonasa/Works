@@ -1,2 +1,2 @@
-#Constant web refresher (firefox) in python.
+# Constant web refresher (firefox) in python.
 Note: Must download seleninum beforehand
