@@ -16,23 +16,22 @@ def loadWords():
     Depending on the size of the word list, this function may
     take a while to finish.
     """
-    print "Loading word list from file..."
+    print ("Loading word list from file...")
     # inFile: file
-    file = open(WORD_LIST_FILE, 'r', 0)
+    file = open(WORD_LIST_FILE, 'r')
     # line: string
     line = file.readline() # all the words of this file are in 1 line
     #print line
     wordlist = line.split() # splitting line at space
-    print wordlist[0], wordlist[-1]  # check
-    print "Ready! ", len(wordlist), " words loaded."
+    print ("Ready! ", len(wordlist), " words loaded.")
     return wordlist
 
 
-def chooseWord(wordlist):
+def chooseWord(gamelist):
     """
     Returns a word from wordlist at random
     """
-    return random.choice(wordlist)
+    return random.choice(gamelist)
 
 # End helper code
 # -----------------------------------
@@ -58,8 +57,7 @@ def wordGuessed(guessedChars, word):
     for char in word:
         if char not in guessedChars:
             return False
-        else:
-            return True
+    return True
     
     
 def buildTemplate(template, word):
@@ -125,44 +123,38 @@ def hangman(secretWord):
         guessedChars += userGuess
         #print guessedChars
 
-        if guessCorrect(userGuess, secretWord):
-            print "correct"
+        if isGuessCorrect(userGuess, secretWord):
+            print ("Correct")
             
             if wordGuessed(guessedChars, secretWord):
-                print 'yay game won'
+                print ('Congrats! Game won!')
                 gameWon = True
                 break
 
         else:
-            print "wrong"
+            print ("Wrong")
 
 
 
         gameTemplate = buildTemplate(guessedChars, secretWord)
-        print "your guesses so far ",gameTemplate
+        print ("your guesses so far ",gameTemplate)
 
         remainder = getRemainingChars(guessedChars)
-        print "your remaining characters are: ",remainder
+        print ("your remaining characters are: ",remainder)
         
-        print "you have",8-numGuesses,"guesses left"
+        print ("you have",8-numGuesses,"guesses left")
         
         numGuesses += 1
 
     if not gameWon:
-        print "Sorry, you lost the game"
+        print ("Sorry, you lost the game")
 
 # Run the game
 
-
-wordlist = loadWords()
-
-secretWord = chooseWord(wordlist).lower()
-hangman(secretWord)
-
-
-
+gamelist = loadWords()
+while (len(gamelist)!=0):
+    secretWord = chooseWord(gamelist).lower()
+    hangman(secretWord)
+    gamelist.remove(secretWord)
+    print ("New game!")
     
-
-
-    
-
