@@ -5,7 +5,9 @@ import SearchBar from './components/search_bar';
 import YTSearch from 'youtube-api-search';
 import VideoDetail from './components/video_detail';
 import VideoList from './components/video_list';
-const API_KEY = 'AIzaSyDWk9JFShcanv8VNGAJy1-0F1rxGQ9D5yM';
+//API_KEY is the key from google's API system to let you access data
+//Each user must create their own unique key
+import API_KEY from './components/API_KEY';
 
 // Create a new component.
 // This component should produce some HTML
